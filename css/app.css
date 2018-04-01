@@ -17,7 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/place.jpg'); /* Background pattern from Subtle Patterns */
+    background-size: cover;
     font-family: 'Coda', cursive;
 }
 
@@ -29,8 +30,10 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+  font-weight: 700;
+  font-size: 39px;
+  font-family: fantasy;
+  color: mistyrose;
 }
 
 /*
@@ -40,7 +43,7 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: linear-gradient(160deg, #5cfff1 0%, #316ce6 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -59,11 +62,14 @@ h1 {
     color: #ffffff;
     border-radius: 8px;
     cursor: pointer;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: 0.3s ease-in-out all;
 }
+
 
 .deck .card.open {
     transform: rotateY(0);
@@ -81,13 +87,64 @@ h1 {
     font-size: 33px;
 }
 
+.img-win {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-right {
+
+  position: absolute;
+  right: 0%;
+
+}
+.img-left {
+
+  position: absolute;
+  left: 0%;
+
+}
+button {
+
+  background: linear-gradient(160deg, #1fffeb 0%, #fdffd4 100%);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 3%;
+    font-family: initial;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    cursor: pointer;
+    float: right;
+}
+.end-button {
+  display: none;
+}
+.move {
+  margin: 0 5% 0 5%;
+}
+#demo {
+  float: right;
+
+}
+.moves,
+.move,
+.care,
+#demo {
+
+  color: gold;
+  font-size: 21px;
+  font-weight: bold;
+
+}
+
+
 /*
  * Styles for the Score Panel
  */
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 450px;
     margin-bottom: 10px;
 }
 
@@ -101,9 +158,5 @@ h1 {
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
-}
-
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
+    color: gold;
 }
