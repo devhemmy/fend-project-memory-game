@@ -87,7 +87,11 @@ h1 {
     font-size: 33px;
 }
 
+
+/* Hemmy's Css */
+
 .img-win {
+  
   display: none;
   justify-content: center;
   align-items: center;
@@ -117,12 +121,17 @@ button {
     float: right;
 }
 .end-button {
+
   display: none;
+
 }
 .move {
+
   margin: 0 5% 0 5%;
+
 }
 #demo {
+
   float: right;
 
 }
@@ -136,6 +145,8 @@ button {
   font-weight: bold;
 
 }
+
+/* the End Of My Css */
 
 
 /*
