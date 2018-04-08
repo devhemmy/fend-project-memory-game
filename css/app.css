@@ -91,7 +91,7 @@ h1 {
 /* Hemmy's Css */
 
 .img-win {
-  
+
   display: none;
   justify-content: center;
   align-items: center;
@@ -125,6 +125,10 @@ button {
   display: none;
 
 }
+.end-buttonn {
+  width: 100%;
+  display: block;
+}
 .move {
 
   margin: 0 5% 0 5%;
@@ -146,6 +150,35 @@ button {
 
 }
 
+.deck-hemmy {
+
+  width: 600px;
+  background: linear-gradient(160deg, #5cfff1 0%, #316ce6 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  margin: 0 0 3em;
+  display: none;
+  bottom:15%;
+
+}
+.deck-hemmy li {
+
+  list-style: none;
+  text-align: center;
+  color: gold;
+  font-size: 21px;
+  font-weight: bold;
+
+}
+.deck-hemmy .starss li,
+.deck-hemmy  ul {
+
+  display: inline;
+
+}
+
+
 /* the End Of My Css */
 
 
@@ -156,6 +189,7 @@ button {
 .score-panel {
     text-align: left;
     width: 450px;
+    display: inline;
     margin-bottom: 10px;
 }
 

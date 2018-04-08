@@ -4,6 +4,7 @@
 
  //The Start  button
  const reset = document.querySelector(".end-button");
+ const resett = document.querySelector(".end-buttonn");
  const play = document.querySelector(".start-button");
  play.addEventListener("click",function(){
    //creating the array and the interactions
@@ -55,6 +56,9 @@
     location.reload();
   });
 
+  resett.addEventListener("click",function(){
+    location.reload();
+  });
 
 
 /*
@@ -107,6 +111,7 @@ function shuffle(array) {
     }
     let t = hours + ":" + min + ":" + sec
     document.getElementById("demo").innerHTML = t;
+    document.getElementById("demo2").innerHTML = t;
     }
     function myStopFunction() {
         clearInterval(stop);
@@ -121,9 +126,13 @@ function shuffle(array) {
   const leftImg = document.querySelector(".img-left");
   const winImg = document.querySelector(".img-win");
   const stars = document.querySelectorAll(".stars li");
+  const starss = document.querySelectorAll(".starss li");
   const moves = document.querySelector(".moves");
+  const movess = document.querySelector(".movess");
   const move = document.querySelector(".move");
+  const movee = document.querySelector(".movee");
   const care = document.querySelector(".care");
+  const cong = document.querySelector(".deck-hemmy");
 
 
 
@@ -135,9 +144,11 @@ function shuffle(array) {
         num++
         if (num == 1){
           move.textContent = num + " Move"
+          movee.textContent = num + " Move"
         }
         else{
           move.textContent = num + " Moves"
+          movee.textContent = num + " Moves"
         }
 
       }
@@ -176,6 +187,8 @@ function shuffle(array) {
               winImg.style.display="flex";
               talk.textContent = "YAAAAAAAAY You Found Them!!!!";
                myStopFunction() ;
+               cong.style.display="block";
+               cong.style.position="fixed";
 
             }
           }
@@ -193,30 +206,34 @@ function shuffle(array) {
             console.log(wrong);
             switch (wrong){
 
-              case 2 :
+              case 3 :
               talk.textContent = "be Careful! If You Make Many Mistakes You will hurt Them!";
               stars[0].remove();
+              starss[0].remove();
               moves.textContent = 2;
+              movess.textContent = 2;
               rightImg.setAttribute("src","img/1star.png");
               leftImg.setAttribute("src","img/1stary.png");
               break;
 
-              case 4 :
+              case 6 :
               talk.textContent = "You Are still Making Many Mistakes!";
               stars[1].remove();
+              starss[1].remove();
               moves.textContent = 1;
+              movess.textContent = 1;
               rightImg.setAttribute("src","img/2star.png");
               leftImg.setAttribute("src","img/2stary.png");
               care.textContent = "Star";
               break;
 
-              case 6 :
+              case 9 :
               talk.textContent = "Nooooooooooooooooooooooo That is Too Much!";
-              stars[2].remove();
-              moves.textContent = 0;
+
+
               rightImg.setAttribute("src","img/3star.png");
               leftImg.setAttribute("src","img/3stary.png");
-              care.textContent = "Stars";
+
               break;
             }
 
